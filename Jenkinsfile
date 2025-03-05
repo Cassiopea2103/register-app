@@ -16,9 +16,7 @@ pipeline {
         stage ('Checkout github repository'){
             steps {
                 echo 'Checking out the repository...'
-                steps {
-                    git branch : 'main' , credentialsId : 'github-credentials' , url : 'https://github.com/Cassiopea2103/register-app.git'
-                }
+                git branch : 'main' , credentialsId : 'github-credentials' , url : 'https://github.com/Cassiopea2103/register-app.git'
             }
         }
         stage ('Application build'){
